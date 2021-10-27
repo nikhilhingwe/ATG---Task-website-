@@ -1,0 +1,167 @@
+@use '../utils'as *;
+
+.account{
+    z-index: 100;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__form{
+        form{
+            input{
+                height: 45px;
+                width: 300px;
+                font-size: 20px;
+                padding: 0px 10px;
+                border: none;
+                outline: none;
+            }
+            .lname{
+                margin-left: -4px;
+            }
+            .email{
+                width: 400px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.search__dropdown{
+    @include breakpoint-min(500px){
+        display: none;
+    }
+    cursor: pointer;
+    position: relative;
+    .dropdown{
+        position: relative;
+        background: #fff;
+        @extend %flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.041);
+        border-radius: 4px;
+        padding: rem(10) rem(15);
+        min-width: 10rem;             
+        p{
+            font-size: 13px;
+        }
+    }
+    .down{
+        font-size: rem(18);
+        transition: 0.2s ease-in-out;
+    }
+    .rotate{
+        transform: rotate(180deg);
+    }
+    .dropdown-content{
+        z-index: 100;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        top: 62px;
+        padding: rem(10) rem(18);
+        background: #fff;
+        min-width: 100%;
+        box-shadow: 0px 0px 2px 2px rgba(110, 109, 109, 0.096);
+        border-radius: 4px;
+        @include breakpoint(768px){
+            cursor: none;
+        }
+        p{
+            font-weight: 400;
+        }
+        ul{
+            li{
+                position: relative;
+                padding: 5.3px 0px;
+                @include breakpoint(600px){
+                    font-size: 13px;
+                }
+                &:hover{
+                    color: rgba(0, 0, 0, 0.473);
+                }
+            }
+        }
+    }
+    .dropdown-content-show{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+.attribution-mobile{
+    z-index: 300;
+    position: fixed;
+    top: 30%;
+    left: 20px;
+    right: 20px;
+    line-height: 1.7;
+    border-radius: 20px;
+    max-width: 300px;
+    margin: auto;
+    visibility: hidden;
+    box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.404);
+    background: #fff;
+    .att-content{
+        text-align: left;
+        padding: 40px 10px;
+        color: #495057;
+        font-size: 1.1rem;
+        font-weight: 600;
+        p{
+            text-align: center;
+            margin-top: 10px;
+        }
+        a{
+            color: inherit;
+        }
+        .f{
+            width: 100%;
+            // margin: 10px 0px;
+            padding: 10px;
+        }
+        ion-icon{
+            position: relative;
+            top: 3px;
+            margin-right: 10px;
+        }
+    }
+    @include breakpoint-min(900px){
+        display: none;
+    }
+}
+
+
+.mobile-name-add{
+    animation: slideDown 0.3s ease-in-out forwards;
+}
+
+.mobile-name-remove{
+    animation: slideRight 0.5s ease-in-out forwards;
+}
+
+
+
+.div{
+    text-align: center;
+    padding: 30px;
+}

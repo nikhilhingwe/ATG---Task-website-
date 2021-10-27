@@ -1,0 +1,32 @@
+@use '../utils' as *;
+.hero{
+    background: url(/Images/hero.png);
+    height: 440px;
+    width: 100%;
+    position: relative;
+    .overlay{
+        background: #000;
+        height: inherit;
+        width: 100%;
+        opacity: 0.6;
+    }
+    &__content{
+        position: absolute;
+        bottom: 80px;
+        color: #fff;
+
+        h1{
+            font-size: 36px;
+            line-height: 1.6;
+            @include breakpoint(450px){
+                font-size: 27px;
+            }
+        }
+        p{
+            font-size: 18px;
+            @include breakpoint(450px){
+                font-size: 15px;
+            }
+        }
+    }
+}

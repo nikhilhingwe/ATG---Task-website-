@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a,a:active,
+a:hover{
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
